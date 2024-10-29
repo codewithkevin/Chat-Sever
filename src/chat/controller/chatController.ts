@@ -1,6 +1,22 @@
 import { Request, Response, RequestHandler } from "express";
 import * as chatService from "../services/chatServices";
 
+export const createChatRoom: RequestHandler = async (req: Request, res: Response): Promise<void> => {
+    const { groupName, isGroupChat, members } = req.body;
+
+    if (!members || members.length < 2) {
+        res.status(400).json({ error: "At least two members are required to create a room." });
+        return;
+    }
+
+    try {
+        const newChatRoom = await chatService.createChatRoom({ groupName, isGroupChat, members });
+        res.status(201).json(newChatRoom);
+    } catch (error) {
+        res.status(500).json({ error: "Failed to create chat room", details: error });
+    }
+};
+
 export const sendMessage: RequestHandler = async (req, res) => {
     const { chatRoomId, sender, message } = req.body;
 

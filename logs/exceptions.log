@@ -93,3 +93,97 @@ src/chat/services/chatServices.ts(28,9): error TS2304: Cannot find name 'res'.
     at Object.nodeDevHook [as .ts] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
     at Module.load (node:internal/modules/cjs/loader:1288:32)
     at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2024-10-29 09:17:58 error: Error: ⨯ Unable to compile TypeScript:
+src/chat/controller/chatController.ts(5,14): error TS2322: Type '(req: Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>, number>) => Promise<...>' is not assignable to type 'RequestHandler<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+  Type 'Promise<Response<any, Record<string, any>, number> | undefined>' is not assignable to type 'void | Promise<void>'.
+    Type 'Promise<Response<any, Record<string, any>, number> | undefined>' is not assignable to type 'Promise<void>'.
+      Type 'Response<any, Record<string, any>, number> | undefined' is not assignable to type 'void'.
+        Type 'Response<any, Record<string, any>, number>' is not assignable to type 'void'.
+
+    at Object.<anonymous> (/Users/mac/Desktop/chatServer/src/chat/controller/chatController.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/mac/Desktop/chatServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2024-10-29 12:00:30 error: Error: ⨯ Unable to compile TypeScript:
+src/chat/controller/chatController.ts(5,14): error TS2322: Type '(req: Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>, number>) => Promise<...>' is not assignable to type 'RequestHandler<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+  Type 'Promise<Response<any, Record<string, any>, number>>' is not assignable to type 'void | Promise<void>'.
+    Type 'Promise<Response<any, Record<string, any>, number>>' is not assignable to type 'Promise<void>'.
+      Type 'Response<any, Record<string, any>, number>' is not assignable to type 'void'.
+
+    at Object.<anonymous> (/Users/mac/Desktop/chatServer/src/chat/controller/chatController.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/mac/Desktop/chatServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2024-10-29 12:00:36 error: Error: ⨯ Unable to compile TypeScript:
+src/chat/controller/chatController.ts(5,14): error TS2322: Type '(req: Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>, number>) => Promise<...>' is not assignable to type 'RequestHandler<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+  Type 'Promise<Response<any, Record<string, any>, number>>' is not assignable to type 'void | Promise<void>'.
+    Type 'Promise<Response<any, Record<string, any>, number>>' is not assignable to type 'Promise<void>'.
+      Type 'Response<any, Record<string, any>, number>' is not assignable to type 'void'.
+
+    at Object.<anonymous> (/Users/mac/Desktop/chatServer/src/chat/controller/chatController.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/mac/Desktop/chatServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2024-10-29 12:00:37 error: Error: ⨯ Unable to compile TypeScript:
+src/chat/controller/chatController.ts(5,14): error TS2322: Type '(req: Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>, number>) => Promise<...>' is not assignable to type 'RequestHandler<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+  Type 'Promise<Response<any, Record<string, any>, number>>' is not assignable to type 'void | Promise<void>'.
+    Type 'Promise<Response<any, Record<string, any>, number>>' is not assignable to type 'Promise<void>'.
+      Type 'Response<any, Record<string, any>, number>' is not assignable to type 'void'.
+
+    at Object.<anonymous> (/Users/mac/Desktop/chatServer/src/chat/controller/chatController.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/mac/Desktop/chatServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2024-10-29 12:00:42 error: Error: ⨯ Unable to compile TypeScript:
+src/chat/controller/chatController.ts(5,14): error TS2322: Type '(req: Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>, number>) => Promise<...>' is not assignable to type 'RequestHandler<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+  Type 'Promise<Response<any, Record<string, any>, number>>' is not assignable to type 'void | Promise<void>'.
+    Type 'Promise<Response<any, Record<string, any>, number>>' is not assignable to type 'Promise<void>'.
+      Type 'Response<any, Record<string, any>, number>' is not assignable to type 'void'.
+
+    at Object.<anonymous> (/Users/mac/Desktop/chatServer/src/chat/controller/chatController.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/mac/Desktop/chatServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2024-10-29 12:59:05 error: Error: ⨯ Unable to compile TypeScript:
+src/socket/chatEventSocket.ts(29,34): error TS2339: Property 'chatRoom' does not exist on type 'void'.
+
+    at Object.<anonymous> (/Users/mac/Desktop/chatServer/src/socket/chatEventSocket.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/mac/Desktop/chatServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)

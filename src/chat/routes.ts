@@ -10,4 +10,6 @@ router.get("/messages/:roomId", chatController.getMessages);
 
 router.get("/room/:roomId", chatController.getChatRoom);
 
+router.post("/room", chatController.createChatRoom);
+
 export default router;

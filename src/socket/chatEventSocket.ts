@@ -1,5 +1,6 @@
 import { Server, Socket } from "socket.io";
 import * as chatService from "../chat/services/chatServices";
+import { Message, statusEnums } from "../message/model/message.model";
 
 export default (io: Server, socket: Socket) => {
     // Handle room joining
@@ -20,7 +21,25 @@ export default (io: Server, socket: Socket) => {
         }
     });
 
+    //Handle Message Status
+    socket.on("messageStatus", async (data) => {
+        const { messageId, status } = data;
+        await Message.findByIdAndUpdate(messageId, { status });
+        io.to(data.chatRoomId).emit("messageStatus", { messageId, status });
+    });
+    // socket.on("messageStatus", async (data: { messageId: string; status: typeof statusEnums[number] }) => {
+    //     const { messageId, status } = data;
+    //     try {
+    //         const updatedMessage = await chatService.updateMessageStatus(messageId, status);
+    //         io.to(updatedMessage.chatRoom).emit("messageStatusUpdated", updatedMessage);
+    //     } catch (error) {
+    //         console.error("Failed to update message status:", error);
+    //         socket.emit("error", { message: "Failed to update message status" });
+    //     }
+    // });
+
     // Handle typing indicator
+
     socket.on("typing", (roomId: string) => {
         socket.to(roomId).emit("typing", { userId: socket.id });
     });

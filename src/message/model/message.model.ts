@@ -3,8 +3,8 @@ import { ChatRoomDocument } from '../../chat/model/chatModel';
 
 export const statusEnums = ["sent", "delivered", "read"] as const;
 
-
 export interface MessageDocument extends Document {
+    _id: string;
     chatRoom: ChatRoomDocument["_id"];
     sender: string;
     message: string;

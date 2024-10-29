@@ -1,5 +1,5 @@
 import { ChatRoom, ChatRoomDocument } from '../model/chatModel';
-import { Message, MessageDocument } from '../../message/model/message.model';
+import { Message, MessageDocument, statusEnums } from '../../message/model/message.model';
 
 export interface CreateMessageParams {
     chatRoomId: string;
@@ -47,4 +47,9 @@ export const getMessagesByRoomId = async (roomId: string, limit = 20): Promise<M
         .sort({ createdAt: -1 })
         .limit(limit)
         .exec();
+};
+
+//updateMessageStatus 
+export const updateMessageStatus = async (messageId: string, status: typeof statusEnums[number]) => {
+    await Message.findByIdAndUpdate(messageId, { status });
 };
