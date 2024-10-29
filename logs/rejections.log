@@ -1,0 +1,11 @@
+2024-10-29 05:45:23 error: Error: Configuration property "dbUri" is not defined
+    at Config.get (/Users/mac/Desktop/chatServer/node_modules/config/lib/config.js:181:11)
+    at /Users/mac/Desktop/chatServer/src/utils/connectDB.ts:6:23
+    at Generator.next (<anonymous>)
+    at /Users/mac/Desktop/chatServer/src/utils/connectDB.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/mac/Desktop/chatServer/src/utils/connectDB.ts:4:12)
+    at connectDB (/Users/mac/Desktop/chatServer/src/utils/connectDB.ts:5:37)
+    at /Users/mac/Desktop/chatServer/src/app.ts:31:20
+    at Generator.next (<anonymous>)
+    at /Users/mac/Desktop/chatServer/src/app.ts:8:71

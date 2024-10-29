@@ -1,0 +1,95 @@
+2024-10-29 05:31:45 error: Error: ⨯ Unable to compile TypeScript:
+src/routes.ts(2,24): error TS2306: File '/Users/mac/Desktop/chatServer/src/chat/routes.ts' is not a module.
+
+    at Object.<anonymous> (/Users/mac/Desktop/chatServer/src/routes.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/mac/Desktop/chatServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-5014361784198691.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-5014361784198691.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-5014361784198691.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2024-10-29 05:39:40 error: Error [ERR_REQUIRE_ESM]: require() of ES Module /Users/mac/Desktop/chatServer/node_modules/nanoid/index.js from /Users/mac/Desktop/chatServer/src/chat/model/chatModel.ts not supported.
+Instead change the require of index.js in /Users/mac/Desktop/chatServer/src/chat/model/chatModel.ts to a dynamic import() which is available in all CommonJS modules.
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-7598869925190375.js:114:20)
+    at Object.nodeDevHook [as .js] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Object.<anonymous> (/Users/mac/Desktop/chatServer/src/chat/model/chatModel.ts:28:18)
+    at Module._compile (/Users/mac/Desktop/chatServer/node_modules/source-map-support/source-map-support.js:568:25)
+2024-10-29 05:40:10 error: Error [ERR_REQUIRE_ESM]: require() of ES Module /Users/mac/Desktop/chatServer/node_modules/nanoid/index.js from /Users/mac/Desktop/chatServer/src/chat/model/chatModel.ts not supported.
+Instead change the require of index.js in /Users/mac/Desktop/chatServer/src/chat/model/chatModel.ts to a dynamic import() which is available in all CommonJS modules.
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-7598869925190375.js:114:20)
+    at Object.nodeDevHook [as .js] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Object.<anonymous> (/Users/mac/Desktop/chatServer/src/chat/model/chatModel.ts:28:18)
+    at Module._compile (/Users/mac/Desktop/chatServer/node_modules/source-map-support/source-map-support.js:568:25)
+2024-10-29 05:40:27 error: Error [ERR_REQUIRE_ESM]: require() of ES Module /Users/mac/Desktop/chatServer/node_modules/nanoid/index.js from /Users/mac/Desktop/chatServer/src/chat/model/chatModel.ts not supported.
+Instead change the require of index.js in /Users/mac/Desktop/chatServer/src/chat/model/chatModel.ts to a dynamic import() which is available in all CommonJS modules.
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-2832703041134048.js:114:20)
+    at Object.nodeDevHook [as .js] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Object.<anonymous> (/Users/mac/Desktop/chatServer/src/chat/model/chatModel.ts:28:18)
+    at Module._compile (/Users/mac/Desktop/chatServer/node_modules/source-map-support/source-map-support.js:568:25)
+2024-10-29 05:41:23 error: Error [ERR_REQUIRE_ESM]: require() of ES Module /Users/mac/Desktop/chatServer/node_modules/nanoid/index.js from /Users/mac/Desktop/chatServer/src/message/model/message.model.ts not supported.
+Instead change the require of index.js in /Users/mac/Desktop/chatServer/src/message/model/message.model.ts to a dynamic import() which is available in all CommonJS modules.
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-2832703041134048.js:114:20)
+    at Object.nodeDevHook [as .js] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Object.<anonymous> (/Users/mac/Desktop/chatServer/src/message/model/message.model.ts:28:18)
+    at Module._compile (/Users/mac/Desktop/chatServer/node_modules/source-map-support/source-map-support.js:568:25)
+2024-10-29 05:42:31 error: Error: Configuration property "port" is not defined
+    at Config.get (/Users/mac/Desktop/chatServer/node_modules/config/lib/config.js:181:11)
+    at Object.<anonymous> (/Users/mac/Desktop/chatServer/src/app.ts:14:21)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/mac/Desktop/chatServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-2832703041134048.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-2832703041134048.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-2832703041134048.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+2024-10-29 05:42:34 error: Error: Configuration property "port" is not defined
+    at Config.get (/Users/mac/Desktop/chatServer/node_modules/config/lib/config.js:181:11)
+    at Object.<anonymous> (/Users/mac/Desktop/chatServer/src/app.ts:14:21)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/mac/Desktop/chatServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-2832703041134048.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-2832703041134048.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-2832703041134048.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+2024-10-29 05:42:43 error: Error: Configuration property "port" is not defined
+    at Config.get (/Users/mac/Desktop/chatServer/node_modules/config/lib/config.js:181:11)
+    at Object.<anonymous> (/Users/mac/Desktop/chatServer/src/app.ts:14:21)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/mac/Desktop/chatServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-2832703041134048.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-2832703041134048.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-2832703041134048.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+2024-10-29 05:44:40 error: Error: Configuration property "port" is not defined
+    at Config.get (/Users/mac/Desktop/chatServer/node_modules/config/lib/config.js:181:11)
+    at Object.<anonymous> (/Users/mac/Desktop/chatServer/src/app.ts:14:21)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/mac/Desktop/chatServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-5572384061779303.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-5572384061779303.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-5572384061779303.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+2024-10-29 08:46:48 error: Error: ⨯ Unable to compile TypeScript:
+src/chat/services/chatServices.ts(27,35): error TS2304: Cannot find name 'chatService'.
+src/chat/services/chatServices.ts(28,9): error TS2304: Cannot find name 'res'.
+
+    at Object.<anonymous> (/Users/mac/Desktop/chatServer/src/chat/services/chatServices.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/mac/Desktop/chatServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/yg/mjyfsyz13zxdl0v8s5pvbnrm0000gn/T/ts-node-dev-hook-9266975077273782.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/mac/Desktop/chatServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
