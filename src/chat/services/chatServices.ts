@@ -2,8 +2,8 @@ import { ChatRoom, ChatRoomDocument } from '../model/chatModel';
 import { Message, MessageDocument, statusEnums } from '../../message/model/message.model';
 
 export interface CreateMessageParams {
-    chatRoomId: string;
     sender: string;
+    receiver: string;
     message: string;
 }
 interface CreateChatRoomParams {
@@ -12,34 +12,45 @@ interface CreateChatRoomParams {
     members: string[];
 }
 
-export const createChatRoom = async ({
-    groupName,
-    isGroupChat = false,
-    members,
-}: CreateChatRoomParams) => {
-    const newChatRoom = new ChatRoom({
-        groupName: isGroupChat ? groupName : undefined,
-        isGroupChat,
-        members,
-    });
-    return await newChatRoom.save();
-}
+
+
 
 export const getChatRoomById = async (roomId: string): Promise<ChatRoomDocument | null> => {
     return await ChatRoom.findById(roomId).populate("members").exec();
 };
 
-export const createMessage = async ({
-    chatRoomId,
-    sender,
-    message,
-}: CreateMessageParams): Promise<MessageDocument> => {
+export const sendMessage = async ({ sender, receiver, message }: CreateMessageParams): Promise<MessageDocument> => {
+    const members = [sender, receiver].sort(); // Sort to ensure consistent ordering
+
+    // Check if a chat room exists for the two members
+    let chatRoom = await ChatRoom.findOne({ members }).exec();
+
+    // If no chat room exists, create one
+    if (!chatRoom) {
+        chatRoom = new ChatRoom({ members });
+        await chatRoom.save();
+    }
+
+    // Save the message in the chat room
     const newMessage = new Message({
-        chatRoom: chatRoomId,
+        chatRoom: chatRoom._id,
         sender,
         message,
+        status: "sent",
     });
+
     return await newMessage.save();
+};
+
+export const updateMessageStatus = async (
+    messageId: string,
+    status: typeof statusEnums[number]
+): Promise<MessageDocument | null> => {
+    return await Message.findByIdAndUpdate(
+        messageId,
+        { status },
+        { new: true }
+    ).exec();
 };
 
 export const getMessagesByRoomId = async (roomId: string, limit = 20): Promise<MessageDocument[]> => {
@@ -49,7 +60,5 @@ export const getMessagesByRoomId = async (roomId: string, limit = 20): Promise<M
         .exec();
 };
 
-//updateMessageStatus 
-export const updateMessageStatus = async (messageId: string, status: typeof statusEnums[number]) => {
-    await Message.findByIdAndUpdate(messageId, { status });
-};
+
+
