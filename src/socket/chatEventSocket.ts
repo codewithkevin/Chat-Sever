@@ -1,6 +1,6 @@
 import { Server, Socket } from "socket.io";
 import * as chatService from "../chat/services/chatServices";
-import { MessageDocument, statusEnums } from "../message/model/message.model";
+import { MessageDocument, MessageType, statusEnums } from "../message/model/message.model";
 
 export default (io: Server, socket: Socket) => {
     // Handle room joining for two users
@@ -10,15 +10,23 @@ export default (io: Server, socket: Socket) => {
     });
 
     // Handle new messages with dynamic chat room creation
-    socket.on("message", async (data: { sender: string; receiver: string; message: string }) => {
-        const { sender, receiver, message } = data;
+    socket.on("message", async (data: {
+        sender: string; receiver: string; message: {
+            text: string;
+            caption: string;
+        }, type: MessageType
+    }) => {
+        const { sender, receiver, message, type } = data;
 
         try {
-            const savedMessage = await chatService.sendMessage({ sender, receiver, message }) as MessageDocument;
+            const savedMessage = await chatService.sendMessage({ sender, receiver, message, type }) as MessageDocument;
 
             if (savedMessage?.chatRoom) {
                 io.to(savedMessage.chatRoom.toString()).emit("newMessage", savedMessage);
             }
+
+            socket.emit("messageSent", savedMessage);
+            console.log("Success ", savedMessage)
         } catch (error) {
             console.error("Failed to save message:", error);
             socket.emit("error", { message: "Failed to send message" });

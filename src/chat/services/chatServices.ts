@@ -1,26 +1,13 @@
 import { ChatRoom, ChatRoomDocument } from '../model/chatModel';
-import { Message, MessageDocument, statusEnums } from '../../message/model/message.model';
-
-export interface CreateMessageParams {
-    sender: string;
-    receiver: string;
-    message: string;
-}
-interface CreateChatRoomParams {
-    groupName?: string;
-    isGroupChat?: boolean;
-    members: string[];
-}
-
-
+import { Message, MessageDocument, MessageInput, statusEnums } from '../../message/model/message.model';
 
 
 export const getChatRoomById = async (roomId: string): Promise<ChatRoomDocument | null> => {
     return await ChatRoom.findById(roomId).populate("members").exec();
 };
 
-export const sendMessage = async ({ sender, receiver, message }: CreateMessageParams): Promise<MessageDocument> => {
-    const members = [sender, receiver].sort(); // Sort to ensure consistent ordering
+export const sendMessage = async ({ sender, receiver, message, type }: MessageInput): Promise<MessageDocument> => {
+    const members = [sender, receiver].sort();
 
     // Check if a chat room exists for the two members
     let chatRoom = await ChatRoom.findOne({ members }).exec();
@@ -36,8 +23,11 @@ export const sendMessage = async ({ sender, receiver, message }: CreateMessagePa
         chatRoom: chatRoom._id,
         sender,
         message,
+        receiver,
+        type,
         status: "sent",
     });
+
 
     return await newMessage.save();
 };

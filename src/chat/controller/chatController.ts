@@ -18,7 +18,7 @@ import * as chatService from "../services/chatServices";
 // };
 
 export const sendMessage: RequestHandler = async (req: Request, res: Response): Promise<void> => {
-    const { sender, receiver, message } = req.body;
+    const { sender, receiver, message, type } = req.body;
 
     if (!sender || !receiver || !message) {
         res.status(400).json({ error: "Sender, receiver, and message are required" });
@@ -26,7 +26,7 @@ export const sendMessage: RequestHandler = async (req: Request, res: Response): 
     }
 
     try {
-        const createdMessage = await chatService.sendMessage({ sender, receiver, message });
+        const createdMessage = await chatService.sendMessage({ sender, receiver, message, type });
         res.status(201).json(createdMessage);
     } catch (error) {
         res.status(500).json({ error: "Failed to send message", details: error });
